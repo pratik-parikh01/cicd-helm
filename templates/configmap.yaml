@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Configmap
+metadata:
+  name: cm-1
+  namespace: "{{ .Values.namespace }}"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: cicd
+    meta.helm.sh/release-namespace: "{{ .Values.namespace }}"
+data:
+  text: This is some sample data
